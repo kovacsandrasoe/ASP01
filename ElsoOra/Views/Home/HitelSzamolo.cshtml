@@ -1,0 +1,39 @@
+﻿@model ElsoOra.ViewModels.HitelViewModel 
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HitelSzamolo</title>
+</head>
+<body>
+
+    <h1>@Model.Nev hitelkonstrukciója:</h1>
+
+    <table>
+        <tr>
+            <th>Évszám</th>
+            <th>Tőketartozás</th>
+            <th>Kamatfizetés</th>
+            <th>Tőketörlesztés</th>
+            <th>Adósságszolgálat</th>
+        </tr>
+        @{
+            for (int i = 0; i < Model.Matrix.GetLength(0); i++)
+            {
+                 <tr>
+                      <td>@Model.Matrix[i, 0]</td>
+                      <td>@Model.Matrix[i, 1]</td>
+                      <td>@Model.Matrix[i, 2]</td>
+                      <td>@Model.Matrix[i, 3]</td>
+                      <td>@Model.Matrix[i, 4]</td>
+                 </tr>
+            }
+        }
+    </table>
+
+    <h3>Összes kötlség: @Model.Osszesen</h3>
+
+</body>
+</html>
