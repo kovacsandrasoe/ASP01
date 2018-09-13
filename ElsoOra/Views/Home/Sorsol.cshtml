@@ -1,0 +1,38 @@
+﻿@model int
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hirek</title>
+</head>
+<body>
+    <h3>Megvolt a sorsolás!</h3>
+
+    @{
+        switch (Model)
+        {
+            case 1:
+                <p>A jegyed: elégtelen</p>
+                break;
+            case 2:
+                <p>A jegyed: elégséges</p>
+                break;
+            case 3:
+                <p>A jegyed: közepes</p>
+                break;
+            case 4:
+                <p>A jegyed: jó</p>
+                break;
+            case 5:
+                <p>A jegyed: jeles</p>
+                break;
+            default:
+                break;
+        }
+    }
+
+
+</body>
+</html>

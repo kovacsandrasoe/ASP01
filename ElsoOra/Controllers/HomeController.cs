@@ -8,14 +8,27 @@ namespace ElsoOra.Controllers
 {
     public class HomeController : Controller
     {
+        Random r;
+
+        public HomeController()
+        {
+            r = new Random();
+        }
+
+        public IActionResult Hitel()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Hirek()
+        public IActionResult Sorsol()
         {
-            return View();
+            int jegy = r.Next(1, 6);
+            return View(jegy);
         }
     }
 }
